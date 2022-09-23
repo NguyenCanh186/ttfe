@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>Gia tri A: {{tanga}}</p>
+    <p>Gia tri B: {{tangb}}</p>
+    <button v-on:click="a++">Tang A</button>
+    <button v-on:click="b++">Tang B</button>
+
+</div>
+<script>
+    //computed thuc hien nhu mot function nhung no chi duoc coi la mot thuoc tinh
+    new Vue({
+        el: '#app',
+        data: {
+            a: 0,
+            b: 0
+        },
+        computed: {
+            tanga: function (){
+                console.log("goi Function a")
+                return this.a
+            },
+            tangb: function (){
+                console.log("goi Function b")
+                return this.b
+            }
+        },
+        methods: {
+
+        }
+    })
+</script>
+</body>
+</html>
